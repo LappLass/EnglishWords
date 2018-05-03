@@ -20,19 +20,28 @@ header {
 	max-width: 1250px;
 	margin: 0 auto;
 }
-.conntent {
+.content {
 	padding: 0 15px;
 }
 .input-word-item {
 	position: relative;
 	margin-top: 15px;
+	max-width: 100%;
+	overflow: hidden;
 }
 .word {
 	position: absolute;
 	font-size: 18px;
 	top: calc(50% - 9px);
+	left: 150%;
 	z-index: -1;
 	transition: all 2s linear;
+}
+.show-word {
+	left: 51%;
+	transform: translate(25px) scale(-1) rotate(180deg); 
+	font-weight: bold;
+	z-index: 2;
 }
 input[type="text"] {
 	padding: 12px 20px;
