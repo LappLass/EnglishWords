@@ -11,7 +11,7 @@ var listSpans = document.getElementsByClassName('word');
 var arrForCheck = [];
 
 
-function generationWords() {
+generation.onclick = function() {
 	for (var i = 0; i < listInputs.length; i++) {
 		var a =  Math.floor(Math.random() * 2);
 		var numWord = Math.floor(Math.random() * engWords.length);
@@ -27,9 +27,9 @@ function generationWords() {
 	}
 	console.log(arrForCheck);
 }
-generation.onclick = generationWords;
+ 
 
-function checkWords () {
+check.onclick = function () {
 	var amountCorrect = 0;
 	for (var i = 0; i < listInputs.length; i++) {
 		var theWord = listInputs[i].value.toLowerCase();
@@ -47,7 +47,18 @@ function conclusion(num) {
 	for (var i = 0; i < listInputs.length; i++) {
 		result.innerHTML += "||" + listSpans[i].innerHTML + " -- " + arrForCheck[i] + "||" + "<br>";
 	}
-	result.parentNode.style.top="31px";
+	result.parentNode.style.top="70px";
 
 }
-check.onclick = checkWords;
+
+
+reset.onclick = function(){
+	result.parentNode.style.top="-9999px";
+	result.innerHTML = '';
+	for (var i = 0; i < listInputs.length; i++) {
+		listInputs[i].value = '';
+		listInputs[i].placeholder = '';
+		listInputs[i].classList.remove('correct', 'incorrect');
+		arrForCheck = [];
+	}
+}
