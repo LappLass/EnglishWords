@@ -45,7 +45,7 @@ function checkWords () {
 function conclusion(num) {
 	result.innerHTML = "Верно " + num + "/" + listInputs.length + "<br>";
 	for (var i = 0; i < listInputs.length; i++) {
-		result.innerHTML += "||" + listSpans[i].innerHTML + " " + arrForCheck[i] + "||" + "<br>";
+		result.innerHTML += "||" + listSpans[i].innerHTML + " -- " + arrForCheck[i] + "||" + "<br>";
 	}
 	result.parentNode.style.top="31px";
 
