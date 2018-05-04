@@ -55,10 +55,12 @@ function conclusion(num) {
 reset.onclick = function(){
 	result.parentNode.style.top="-9999px";
 	result.innerHTML = '';
+	arrForCheck = [];
 	for (var i = 0; i < listInputs.length; i++) {
 		listInputs[i].value = '';
 		listInputs[i].placeholder = '';
 		listInputs[i].classList.remove('correct', 'incorrect');
-		arrForCheck = [];
+		listSpans[i].classList.remove('show-word');
+
 	}
 }
