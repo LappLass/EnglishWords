@@ -108,3 +108,11 @@ footer {
 	background-image: repeating-linear-gradient(to top,rgb(66, 0, 152) 0%,rgb(255, 255, 255) 50%,rgb(84, 255, 139) 100%);
 }
 
+@media(max-width: 425px) {
+
+	.text-result{
+		padding: 5px;
+		font-size: 13px; 
+	}
+
+}
