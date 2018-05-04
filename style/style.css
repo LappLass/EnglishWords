@@ -22,6 +22,22 @@ header {
 }
 .content {
 	padding: 0 15px;
+	position: relative;
+	overflow: hidden;
+}
+.output-result {
+	background-color: white;
+	position: absolute;
+	width: 35%;
+	left: 55%;
+	top: -9999px;
+	z-index: 99;
+	box-shadow: 0 2px 5px rgb(0,0,0);
+	border-radius: 10%;
+	border: 2px solid grey;
+}
+.text-result {
+	padding: 20px;
 }
 .input-word-item {
 	position: relative;
@@ -35,7 +51,7 @@ header {
 	top: calc(50% - 9px);
 	left: 150%;
 	z-index: -1;
-	transition: all 2s linear;
+	transition: all 1s linear;
 }
 .show-word {
 	left: 51%;
@@ -60,6 +76,12 @@ input[type="text"]::placeholder {
 	font-weight: bold;
 }
 
+.correct {
+	background-color: green;
+}
+.incorrect {
+	background-color: red;
+}
 
 .btn {
   font-weight: 700;
